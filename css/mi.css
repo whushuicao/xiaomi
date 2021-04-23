@@ -195,12 +195,14 @@
 .nav_select{
     width: 100%;
     height: 229px;
+    background-color: #fff;
     border-top: 1px solid #e0e0e0;
     box-shadow: 0 3px 4px rgba(0,0,0,.18);
     position: absolute;
     top: 100%;
     left: 0%;
     display: none;
+    z-index: 997;
 }
 .white_nav li:hover>.nav_select{
     display: block;
@@ -265,6 +267,7 @@
     position: absolute;
     top: 77%;
     display: none;
+    z-index: 998;
 }
 .search>input:focus~.hotword_list{
     display: block;
@@ -293,3 +296,159 @@
     background-color: #fafafa;
 }
 /* 白色导航样式结束 */
+/* 滑动门+轮播图样式开始 */
+.carousel{
+    width: 100%;
+    height: 460px;
+}
+.carousel_main{
+    width: 100%;
+    height: 460px;
+    background-image: url("../images/41fc2ad85864c19cc37a509ff1fb7685.jpg");
+    background-size: 100%;
+    -webkit-animation: adspic 15s infinite linear;
+    position: relative;
+}
+@-webkit-keyframes adspic{
+    0%{
+        background-image: url("../images/41fc2ad85864c19cc37a509ff1fb7685.jpg");
+    }
+    33.5%{
+        background-image: url("../images/020d90ac8cb186b1ff61c98f0dbebdfd.jpg");
+    }
+    67%{
+        background-image: url("../images/a5ebb3ecd10ba5b5f1fa25125d034492.jpg");
+    }
+    100%{
+        background-image: url("../images/175b22f0032803f8bdbd94590c8c6629.jpeg");
+    }
+}
+.left_nav{
+    width: 234px;
+    height: 460px;
+    background-color: rgba(105,101,101,.6);
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+.left_nav>ul>li{
+    width: 234px;
+    height: 42px;
+    line-height: 42px;
+    text-align: left;
+    cursor: pointer;
+}
+.left_nav>ul>li>a{
+    color: #fff;
+    font-size: 14px;
+    margin-left: 30px;
+}
+.left_nav i{
+    float: right;
+    margin-right: 20px;
+    color: #e0e0e0;
+    font-size: 14px;
+}
+.left_nav>ul>li:hover{
+    background-color: #ff6700;
+}
+.left_nav_select_4{
+    width: 992px;
+    height: 460px;
+    background-color: #fff;
+    position: absolute;
+    top: 0%;
+    margin-left: 234px;
+    border: 1px solid #e0e0e0;
+    border-left: none;
+    box-shadow: 0 8px 16px rgba(0,0,0,.18);
+    box-sizing: border-box;
+    display: none;
+    z-index: 996;
+}
+.left_nav_select{
+    width: 247.5px;
+    height: 100%;
+    float: left;
+}
+.left_nav_select li{
+    width: 100%;
+    height: 76px;
+    line-height: 40px;
+    padding: 18px 0 18px 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.left_nav_select img{
+    width: 40px;
+    height: 40px;
+    float: left;
+}
+.left_nav_select span{
+    float: left;
+    text-align: left;
+    width: 175px;
+    margin-left: 12px;
+    color: #333;
+    font-size: 14px;
+    /* CSS控制文字，超出部分显示省略号 */
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
+}
+.left_nav_select li:hover>a>span{
+    color: #ff6700;
+}
+.left_nav>ul>li:hover>.left_nav_select_4{
+    display: block;
+}
+.left_nav_select_3{
+    width: 744px;
+}
+.left_nav_select_2{
+    width: 496px;
+}
+.prev,.next{
+    width: 41px;
+    height: 69px;
+    background-image: url(../images/icon-slides.png);
+    position: absolute;
+    top: 50%;
+    margin-top: -34.5px;
+    cursor: pointer;
+}
+.prev{
+    margin-left: 234px;
+    /* 雪碧图调整图片,负数表示左移 */
+    background-position: -83px;
+}
+.next{
+    right: 0;
+    background-position: -124px;
+}
+.prev:hover{
+    background-position: 0;
+}
+.next:hover{
+    background-position: -42px;
+}
+.bottom_box{
+    position: absolute;
+    right: 30px;
+    bottom: 25px;
+}
+.bottom{
+    float: left;
+    width: 6px;
+    height: 6px;
+    background-color: rgba(0,0,0,.4);
+    border: 2px solid #fff;
+    border-color: hsla(0,0%,100%,.3);
+    border-radius: 10px;
+    margin: 0 4px;
+    cursor: pointer;
+}
+.bottom:first-child,.bottom:hover{
+    background-color: hsla(0,0%,100%,.4);
+    border-color: rgba(0,0,0,.4);
+}
+/* 滑动门+轮播图样式结束 */
