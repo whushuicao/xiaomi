@@ -390,7 +390,7 @@
     margin-left: 12px;
     color: #333;
     font-size: 14px;
-    /* CSS控制文字，超出部分显示省略号 */
+    /* CSS控制文字，超出部分显示省略号，要给宽才行 */
     overflow: hidden;
     text-overflow:ellipsis;
     white-space: nowrap;
@@ -452,3 +452,659 @@
     border-color: rgba(0,0,0,.4);
 }
 /* 滑动门+轮播图样式结束 */
+/* 广告部分样式开始 */
+.ad{
+    width: 100%;
+    margin-top: 14px;
+    margin-bottom: 26px;
+}
+/* 伪元素法，解决浮动的影响 */
+/* 父元素没有给高度，子元素又float:left，导致下边距加不上去 */
+.ad:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.ad_nav{
+    width: 234px;
+    height: 170px;
+    padding: 3px;
+    box-sizing: border-box;
+    background-color: #5f5750;
+    float: left;
+}
+.ad>.wrap>a{
+    float: left;
+}
+.ad img{
+    width: 316px;
+    height: 170px;
+    margin-left: 14.66px;
+    float: left;
+    transition: box-shadow .2s linear;
+}
+.ad img:hover{
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+}
+.ad_nav li{
+    float: left;
+    width: 76px;
+    height: 82px;
+    padding: 18px 3px 0;
+    box-sizing: border-box;
+    position: relative;
+}
+.ad_nav a{
+    font-size: 12px;
+    color: rgba(255,255,255,.7);
+}
+.ad_nav i{
+    font-size: 24px;
+}
+.ad_nav span{
+    display: block;
+}
+.ad_nav a:hover{
+    color: #fff;
+}
+.ad_nav_ver:after,.ad_nav_hor:before{
+    content: "";
+    display: block;
+    /* 注意是background-color不是color */
+    background-color: #6d655f;
+    position: absolute;
+}
+.ad_nav_ver:after{
+    width: 1px;
+    height: 70px;
+    top: 6px;
+    right: 0;
+}
+.ad_nav_hor:before{
+    width: 64px;
+    height: 1px;
+    bottom: 0;
+    right: 6px;
+}
+/* 广告部分样式结束 */
+/* 小米秒杀部分样式开始 */
+.display{
+    width: 100%;
+    background-color: #f5f5f5;
+    padding: 4px 0 12px;
+}
+.display:after,.seckill_box::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.public_title{
+    width: 100%;
+    height: 58px;
+    line-height: 58px;
+    /* 字体居左 */
+    text-align: left;
+    font-size: 22px;
+    font-weight: 200;
+    clear: both;
+}
+.item1{
+    width: 234px;
+    height: 340px;
+    background-color: #fff;
+    float: left;
+    margin-left: 14px;
+    padding-top: 39px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.seckill_box>div{
+    border-top: 1px solid #e53935;
+}
+.seckill_box>div:last-child{
+    border-top-color: #83c44e;
+}
+.seckill_box>div:first-child{
+    margin-left: 0px;
+    background-color: #f1eded;
+    cursor: auto;
+}
+.seckill_box>div:nth-child(2){
+    border-top-color: #ffac13;
+}
+.seckill_box>div:nth-child(3){
+    border-top-color: #83c44e;
+}
+.seckill_box>div:nth-child(4){
+    border-top-color: #2196f3;
+}
+.time{
+    margin-top: 15px;
+    color: #ef3a3b;
+    font-size: 21px;
+}
+.item1>img{
+    width: 34px;
+    margin: 25px 0;
+}
+.end_time{
+   color: rgba(0,0,0,.54);
+   font-size: 15px;
+}
+.clock{
+    width: 168px;
+    height: 46px;
+    margin: 28px auto 0px;
+}
+.clock>span{
+    width: 46px;
+    height: 46px;
+    line-height: 46px;
+    display: block;
+    float: left;
+    background-color: #605751;
+    color: #fff;
+    font-size: 24px;
+}
+.clock>i{
+    width: 15px;
+    height: 46px;
+    line-height: 46px;
+    color: #605751;
+    font-size: 28px;
+    font-style: normal;
+    float: left;
+}
+.item1>a>img{
+    width: 160px;
+    height: 160px;
+    margin-bottom: 22px;
+}
+.goods_name,.goods_desc{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.goods_name{
+    width: 194px;
+    margin: 0 20px 3px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #212121;
+}
+.goods_desc{
+    width: 194px;
+    margin: 0 20px 12px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+.goods_price{
+    height: 21px;
+    line-height: 21px;
+    color: #ff6709;
+    font-size: 14px;
+}
+.goods_price>del{
+    color: #b0b0b0;
+}
+.public_ad{
+    width: 100%;
+    height: 120px;
+    margin: 22px 0;
+    float: left;
+}
+.title_box{
+    width: 100%;
+    height: 58px;
+    position: relative;
+    clear: both;
+}
+.swiper-controls{
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    margin-top: -12px;
+}
+.swiper-controls>span{
+    width: 24px;
+    height: 16px;
+    line-height: 16px;
+    display: block;
+    float: left;
+    border: 1px solid #e0e0e0;
+    padding: 3px 5px;
+    cursor: pointer;
+}
+.swiper-controls>span>i{
+    color: #b0b0b0;
+    font-size: 16px;
+    font-weight: 800;
+    transition: all 0.3s;
+}
+/* :hover选择器可用于所有元素，不只是链接。 */
+.swiper-controls>span:hover>i{
+    color: #ff6700;
+}
+/* 小米秒杀部分样式结束 */
+/* 手机部分样式开始 */
+.more{
+    float: right;
+    font-size: 16px;
+    line-height: 58px;
+    color: #424242;
+    transition: all .4s;
+}
+.more i{
+    font-size: 20px;
+    line-height: 58px;
+    color: #b0b0b0;
+    margin-left: 8px;
+    transition: color .4s;
+}
+.more:hover,.more:hover i{
+    color: #ff6700;
+}
+.phone_box_left,.electric_appliances_box_left{
+    width: 234px;
+    height: 614px;
+    float: left;
+    transition: all .2s linear;
+}
+.box_bottom_margin{
+    margin-bottom: 8px;
+}
+.seckill,.public_ad1{
+    overflow: hidden;
+}
+.phone_box:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.phone_box_left img{
+    width: 100%;
+}
+.phone_box_right,.electric_appliances_box_right{
+    width: 992px;
+    height: 614px;
+    float: left;
+}
+.phone_box_right li{
+    width: 234px;
+    height: 300px;
+    background-color: #fff;
+    float: left;
+    margin-left: 14px;
+    margin-bottom: 14px;
+}
+.item2{
+    height: 300px;
+    margin-bottom: 14px;
+    padding: 20px 0;
+    transition: all .2s linear;
+}
+.item2>a>img{
+    margin-bottom: 18px;
+}
+.goods_name1{
+    width: 214px;
+    height: 21px;
+    margin: 0 10px 2px;
+    color: #333;
+}
+.goods_desc1{
+    width: 214px;
+    height: 18px;
+    margin: 0 10px 10px;
+}
+.goods_price1{
+    height: 21px;
+    margin: 0 10px 14px;
+}
+.item2:hover,.phone_box_left:hover{
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+    /* 位移,y轴向上移动2像素 */
+    transform: translateY(-2px);
+}
+/* 手机部分样式结束 */
+/* 家电部分样式开始 */
+.item3{
+    margin-left: 0;
+    padding: 0;
+}
+.item3>a>img{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0px;
+}
+.item4{
+    height: 143px;
+    padding-top: 50px;
+}
+.electric_appliances_box:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.public_title ul{
+    float: right;
+    margin-top: 17px;
+}
+.public_title li{
+    height: 24px;
+    margin-left: 30px;
+    float: left;
+}
+.public_title li a{
+    font-size: 16px;
+    line-height: 24px;
+    color: #333;
+    transition: all .1s;
+}
+.public_title li a:hover{
+    color: #ff6700;
+    border-bottom: 1.5px solid #ff6700;
+}
+.last_element_left{
+    float: left;
+    width: 94px;
+    margin-top: -10px;
+}
+.last_element_right{
+    float: right;
+    margin: -20px 30px 0 0;
+}
+.last_element_right img{
+    width: 80px;
+    height: 80px;
+}
+.goods_name2{
+    width: 94px;
+    margin: 0 30px 5px;
+    text-align: left;
+    /* 超出部分自动换行 */
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+.goods_name3{
+    color: #ff6700;
+    font-size: 12px;
+}
+.last_element_left{
+    margin-top: 0px;
+}
+.goods_name4{
+    font-size: 18px;
+    font-weight: bold;
+}
+.goods_name5{
+    font-size: 12px;
+    color: #757575;
+}
+.last_element_right i{
+    font-size: 48px;
+    color: #ff6700;
+    margin: 0px 12px 0 0;
+    /* i元素术属于文字，居中不能使用margin */
+    line-height:93px;
+}
+/* 家电部分样式结束 */
+/* 视频部分样式开始 */
+.video_box>div{
+    width: 296px;
+    height: 285px;
+    background-color: #fff;
+    float: left;
+    margin: 0 14px 14px 0;
+    transition: all .2s linear;
+}
+.video_box>div:last-child{
+    margin-right: 0;
+}
+.video_box>div:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(0,0,0,.1);
+}
+.btn_box{
+    width: 296px;
+    height: 180px;
+    position: relative;
+}
+.btn_box>img{
+    width: 296px;
+    height: 180px;
+}
+.btn_box>i{
+    position: absolute;
+    left: 20px;
+    bottom: 8px;
+    font-size: 28px;
+    color: #fff;
+    transition: all .2s;
+}
+.btn_box:hover>i{
+    color: #ff6700;
+}
+.video_title{
+    width: 268px;
+    height: 21px;
+    /* 单个属性和简写属性，要把单个属性放在下面 */
+    margin: 0 auto;
+    margin-top: 28px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.video_desc{
+    width: 268px;
+    height: 18px;
+    /* 单个属性和简写属性，要把单个属性放在下面 */
+    margin: 0 auto;
+    margin-top: 6px;
+    font-size: 12px;
+    color: #b0b0b0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.video_box:after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* 视频部分样式结束 */
+/* 页脚服务部分样式开始 */
+.service{
+    width: 100%;
+    height: 25px;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 27px 0;
+}
+.service ul{
+    height: 25px;
+}
+.service li{
+    width: 244px;
+    height: 25px;
+    float: left;
+    border-right: 1px solid #e0e0e0;
+}
+.service a{
+    color: #616161;
+    font-size: 16px;
+    line-height: 25px;
+    transition: all .2s;
+}
+.service i{
+    font-size: 24px;
+    margin-right: 6px;
+    vertical-align: -2px;
+}
+.service a:hover{
+    color: #ff6700;
+}
+/* 页脚服务部分样式结束 */
+/* 页脚链接部分样式开始 */
+.footer-link{
+    width: 100%;
+    height: 172px;
+    padding: 40px 0;
+}
+.footer-link>ul{
+    float: left;
+    width: 160px;
+}
+.footer-link li{
+    width: 160px;
+    height: 18px;
+    margin-top: 10px;
+    text-align: left;
+}
+.footer-link li:first-child{
+    margin-top: 0;
+    margin-bottom: 26px;
+    font-size: 14px;
+    color: #424242;
+}
+.footer-link a{
+    color: #757575;
+    font-size: 12px;
+}
+.footer-link a:hover{
+    color: #ff6700;
+}
+.footer-link-right{
+    width: 251px;
+    height: 110px;
+    border-left: 1px solid #e0e0e0;
+    float: right;
+    position: relative;
+}
+.phone-number{
+    color: #ff6700;
+    font-size: 22px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+.worktime{
+    font-size: 12px;
+    color: #616161;
+    margin-bottom: 5px;
+}
+.follow{
+    font-size: 12px;
+    color: #616161;
+    margin-top: 10px;
+}
+.follow i{
+    font-size: 22px;
+    line-height: 22px;
+    margin-left: 6px;
+    vertical-align: -4px;
+}
+.footer-link-right>a{
+    width: 118px;
+    height: 28px;
+    border: 1px solid #ff6700;
+    color: #ff6700;
+    margin: 0 auto;
+    line-height: 28px;
+    font-size: 12px;
+    transition: all .4s;
+}
+.footer-link-right>a>i{
+    font-size: 12px;
+    margin-right: 5px;
+}
+.footer-link-right>a:hover{
+    background-color: #ff6700;
+    color: #fff;
+}
+.follow img{
+    width: 126px;
+    height: 126px;
+    position: absolute;
+    top: 100%;
+    right: 10%;
+    display: none;
+}
+.follow>a:last-child:hover>img{
+    display: block;
+}
+/* 页脚链接部分样式结束 */
+
+.footer-last{
+    background-color: #fafafa;
+}
+.footer-contain{
+    width: 100%;
+    height: 205px;
+    padding: 30px 0;
+    position: relative;
+}
+.footer-contain>img{
+    width: 56px;
+    height: 56px;
+    margin-right: 10px;
+    position: absolute;
+    top: 30px;
+    left: 0;
+}
+.footer-contain-main{
+    width: 100%;
+    height: 156px;
+    padding-left: 67px;
+    box-sizing: border-box;
+}
+.footer-contain-link{
+    width: 100%;
+    height: 37px;
+}
+.footer-contain-link li{
+    float: left;
+    font-size: 12px;
+    line-height: 18px;
+}
+.footer-contain-link a{  
+    color: #757575;
+}
+.footer-contain-link span{
+    color: #b0b0b0;
+    margin: 0 4px;
+}
+.footer-contain-main a:hover{  
+    color: #ff6700;
+}
+.footer-contain-main>div>p{
+    text-align: left;
+    color: #b0b0b0;
+}
+.footer-contain-content{
+    width: 100%;
+    height: 72px;
+    font-size: 12px;
+    line-height: 18px;
+}
+.footer-contain-content a{
+    color: #b0b0b0;
+}
+/* .footer-contain-content p{  
+    text-align: left;
+} */
+.footer-contain-img{
+    width: 100%;
+    height: 28px;
+    text-align: left;
+    margin: 4px 0 15px 0;
+}
+.footer-contain-img img{
+    height: 28px;
+}
+.slogon{
+    margin: 30px auto 0;
+    height: 19px;
+    background: url(https://cdn.cnbj1.fds.api.mi-img.com/staticsfile/global/slogan2020.png) no-repeat center 0;
+}

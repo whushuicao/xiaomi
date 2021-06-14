@@ -1,5 +1,5 @@
-body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, button, p, blockquote, th, td{margin: 0;padding: 0;text-align: center;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea, button, p, blockquote, th, td{margin: 0;padding: 0;text-align: center;color: #333;}
 li{list-style-type: none;}/*li点去掉*/
-a{text-decoration: none;}/*a的下划线去掉*/
+a{text-decoration: none;display: inline-block;}/*a的下划线去掉*/
 input,button,img{border: none;vertical-align: middle;}/*图片不要边框，垂直居中*/
 h1,h2,h3,h4,h5,h6{font-weight: normal;}
